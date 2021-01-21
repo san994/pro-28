@@ -6,7 +6,6 @@ const Constraint = Matter.Constraint;
 const Body = Matter.Body;
 
 var message = "";
-var score = 0;
 
 function preload()
 {
@@ -54,8 +53,6 @@ function draw() {
   background("lightBlue");
 
   textSize(24)
-  text(" the mango you hit : - " + score,300,50);
-
   text(" press space to play again"+message,100,200);
   
   ground.display();
@@ -104,7 +101,6 @@ var distance = dist(mpos.x,mpos.y,spos.x,spos.y);
 if(distance<=lmango.radius+lstone.radius){
 
  Matter.Body.setStatic(lmango.body,false);
- score = score +2
 
 }
 
